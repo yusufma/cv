@@ -1,0 +1,128 @@
+%based on the guide at http://www.cv-templates.info/2009/03/professional-cv-latex/
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{paralist}
+%\usepackage{setspace}
+\usepackage{geometry}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[ Path = fonts/, BoldFont = Fontin-Bold, BoldItalicFont = Fontin-Bold, ItalicFont = Fontin-Italic, SmallCapsFont = Fontin-SmallCaps]{Fontin-Regular}
+%\setmainfont[Path = fonts/, BoldFont = LinLibertine_RB.otf, ItalicFont = LinLibertine_RI.otf, BoldItalicFont = LinLibertine_RBI.otf, SlantedFont = LinLibertine_aRL.otf, BoldSlantedFont = LinLibertine_aBL.otf, SmallCapsFont = LinLibertine_aS.otf, Mapping = tex-text]{LinLibertine_R.otf}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+\geometry{left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+  {\Huge Renxuan \textsc{WANG}
+}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Address:}   &  800 Dongchuan RD. Minhang District, Shanghai, China\\
+    \textsc{Phone:}     & 15026660875\\
+    \textsc{email:}     & \href{mailto:jsvduarte@gmail.com}{wrxpenny@hotmail.com} \\
+\end{tabular}
+
+
+%Section: Education
+\section{Education}
+\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai  \hfill  2013 - 2017\\
+Bachelor of Science in \textsc{Computer Science} \\
+GPA : 3.82/4.3 (Core Curriculum), 3.81/4.3 (Overall)\\
+Relavent Courses : Data Structure and Algorithm Analysis(94), Operating System(100), Discrete Mathematics(97), Embedded Systems and Microcomputers(96), Probability Statistics(97), Linear Algebra(91), Analog Electronic Technology(93), Digital Electronic Technology(90)
+
+
+\section{Awards}
+National Scholarship (Top 1\%, Highest Scholarship in China)  \hfill 2015\\
+Chun-Tsung Scholarship (50 students in SJTU each year)  \hfill 2015 \\
+Academic Excellence Scholarship (Second Class, Top 10\% in Computer Science)  \hfill 2015 \\
+Academic Excellence Scholarship (Second Class, Top 10\% in Computer Science) \hfill 2014 \\
+Three Good Student of SJTU   \hfill 2014\\
+Excellent League Member of SJTU   \hfill 2015 \\
+Honerable Mention in MCM  \hfill  2015
+
+%$|Maximum\ Matching|=|Minimum\ Vertex\ Cover|$ (Bipartite graphs)
+
+\section{Publications}
+ [1] Zhaowei Tan, Jiaxi Liu, \textbf{Renxuan Wang}, Xiaofeng Gao, Guihai Chen and Shaojie Tang. "D$^2$-Tree: A Distributed Double-Layer Namespace Tree Partition Scheme for Metadata Management in Large-Scale Storage Systems", submitted to ICDE 2016
+
+
+\section{Research Experiences}
+\textbf{Big Data Management and Application on Distributed Storage System} \hfill 2015 - present\\
+\emph{Supervised by Professor Xiaofeng Gao}   \hfill \emph{Advanced Network Lab}\\
+$\cdot$ \textbf{Lead a group of 5 people.} Host group discussion, present papers and related knowledge several
+times a semester, arrange survey work and deliver tasks.\\\\
+\textbf{Metadata Management for Distributed Storage Systems} \hfill 2015 - present\\
+\emph{Supervised by Professor Xiaofeng Gao}   \hfill \emph{Advanced Network Lab}\\
+$\cdot$ \textbf{Design a novel metadata architecture and corresponding algorithms.} Invent an architecture to solve the metadata management problem. Devise algorithms both statically and dynamically to balance the locality and load balancing.
+
+
+\section{Notable Projects}
+\textbf{Model Car Controlling Using Android Smart Phones}\\
+Programming both on Android smart phones and model car to make smart phone a remote controller, and make the car able to trace a certain object.\\
+\textbf{Abilities:} Android programming, Bluetooth communication, MCU development\\\\
+\textbf{Model Car Controlling Using Computer}\\
+Programming both on computer and model car to let the car automatically trace a black line by using camera. \\
+\textbf{Abilities:} Image processing, Bluetooth communication, MCU development
+
+\section{Skills}
+\begin{tabular}{r|p{12cm}}
+
+%\renewcommand{\arraystretch}{0.5}
+Programming: &(Proficient) Python, C/C++, \LaTeX \\
+&(Familiar) Java, HTML, PHP, Haskell\\
+\multicolumn{2}{c}{} \\
+Platform: &Windows, Linux, Android, Embedded System\\
+\multicolumn{2}{c}{} \\
+Language: &Mandarin (Native), English (Fluent, CET-4: 616; CET-6: 576)\\
+\multicolumn{2}{c}{} \\
+Others: &Calligraphy(passed Level A art specialty test), Tennis, Table-tennis, Leadership\\
+
+\end{tabular}
+
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\emph{Internship} at \textbf{Julin Machinery Company}, Jiangsu  \hfill   2015\\
+\emph{Lecturer} at \textbf{Hyphen Education}, Shanghai  \hfill  2015 - present
+
+
+\section{Selected Extracurricular Activities}
+Gold medal winner in the $45^{th}$ sports meeting of SJTU \hfill 2014
+
+\end{document}

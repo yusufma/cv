@@ -1,0 +1,132 @@
+%based on the guide at http://www.cv-templates.info/2009/03/professional-cv-latex/
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{CJK}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{paralist}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[ Path = fonts/, BoldFont = Fontin-Bold, BoldItalicFont = Fontin-Bold, ItalicFont = Fontin-Italic, SmallCapsFont = Fontin-SmallCaps]{Fontin-Regular}
+%\setmainfont[Path = fonts/, BoldFont = LinLibertine_RB.otf, ItalicFont = LinLibertine_RI.otf, BoldItalicFont = LinLibertine_RBI.otf, SlantedFont = LinLibertine_aRL.otf, BoldSlantedFont = LinLibertine_aBL.otf, SmallCapsFont = LinLibertine_aS.otf, Mapping = tex-text]{LinLibertine_R.otf}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+\geometry{left=0.8cm, right=0.8cm, top=0.5cm, bottom=0.5cm}
+
+%--------------------BEGIN DOCUMENT----------------------
+
+\begin{document}
+\begin{CJK}{GBK}{song}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+	{\Huge Xiao \textsc{Ma}\\
+		\vspace{5mm}
+		{\normalsize	Shanghai Jiaotong University\\
+			\normalsize 800 Dongchuan RD. Minhang District, Shanghai, China (200240)\\
+			\normalsize E-mail: yusufma555@gmail.com\quad\quad Cellphone: +86 15121118191 \quad\quad Website: \url{http://yusuf-ma.me}}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+
+
+%Section: Education
+\section{Education}
+\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai  \hfill  2013 - 2017\\
+Bachelor of Science in \textsc{Computer Science} \\
+GPA: 3.75/4.0 (Major Curriculum), 3.59/4.0 (Overall)\\
+GPA(Last Year): 3.85/4.0(Major Curriculum), 3.72(Overall)
+
+\section{Awards}
+Academic Excellence Scholarship \hfill 2014 \\
+Honorable Mention of Mathematical Contest In Modeling \hfill 2016\\
+Academic Excellence Scholarship \hfill 2016
+
+\section{Publication}
+\textbf{Xiao Ma}, Zhenzhe Zheng, Fan Wu and Guihai Chen. ``DynaCrowd: a Trust-Based Model for Time Series Prediction in Crowd Sensing Networks", preparing for submission to ICC 2017
+
+\section{Research Experiences}
+\textbf{Time series modeling in Crowd Sensing Network} \hfill 2015 - present\\
+\emph{Supervised by Professor Fan Wu}   \hfill \emph{Advanced Network Lab}\\
+$\cdot$ \textbf{Independent Study.} Designing a system model and learning scheme, aming to model the sparse temporal data collected in the \emph{crowd sensing network},  finding the latent temporal correlation between different time tick and the spatial correlation among different time series through modeling by Dynamic Bayesian Network. We developed an enhanced EM algorithm to learn the parameters of the model under uncertainty. This method can support almost all the time series functionalities, such as smoothing, missing value imputation, forecasting and so on. This model outperforms the state-of-art method in the \emph{crowd sensing network}.\\\\
+\textbf{Hot Topics Prediction in Social Networks} \hfill 2015 - present\\
+\emph{Supervised by Professor Xiaofeng Gao} \hfill \emph{Advanced Network Lab}\\
+\emph{National Undergraduate Training Programs for Innovation and Entrepreneurship}\\
+$\cdot$ \textbf{Independent Study.} For the huge amout of data of social networks and the correlation within topics, using topic modeling to discover the different latent topics among the archives of tweets and analyzing the ``accleration" and ``sum" of the topic's click rate between time slices using probabilistic modeling by Gamma distribution and Beta distribution, enabling the prediction of whether the topic will become a hot topic and when it will become a hot topic. This work will provide a efficient and reliable synthesized approach for hot topic prediction in social network.
+
+\section{Work Experience}
+Internship at \textbf{Intel} Asia Pacific R \& D Center(WTO Group) \hfill 2016 - present\\
+$\cdot$ \textbf{Participant of Open Source Project.} Mainly responsible for regression analysis on V8 engine, a Javascript compiler embedded in Chrome browser, including building automatic test framework based on Python and Shell, targeting critical patch, analyzing the patch and proposing plausible optimizing opinion. Uptill now, more than 20 critical patch have been identified, three of which has been optimized, D8-shell for different platforms including IA32, X64, ARM can be automatically built then tested on various benchmarks, and reports would be generated automatically.
+
+\section{Notable Projects}
+\textbf{Segmentation of Abdominal Adipose Tissues via Deep Learning} \hfill 2015\\
+\emph{Supervised by Professor Bin Sheng}\\
+$\cdot$ \textbf{Leader of a group of 3 people.} Designing a deep learning algorithm to seperate visceral adipose tissues and subcutaneous adipose tissues and an user interface using MATLAB, combining with CUDA based GPU acceleration, then volume rendering the medical images with OpenGL built on MFC. The difference between the result of our algorithm and the manual seperation is at most 5\%.\\
+\textbf{Abilities:} Deep-Learning Neural Neworks, MFC, MATLAB, GPU Programming\\\\
+\textbf{Smart Car Controling System Using Android Smartphones} \hfill 2015\\
+\emph{Supervised by Professor Shiwen Zhang}\\
+$\cdot$ \textbf{Leader of a group of 3 people.} Programming on two Android phones, one for controling and data collection, the other for picturing on the car. We use socket to send messages and video between two smart phones, and use bluetooth to communicate between the phone and the car. \\
+\textbf{Abilities:} Android programming, Bluetooth communication, Socket communication.\\
+\textbf{Smart Car Tracking and Auto-Controling System} \hfill 2014\\
+\emph{Supervised by Professor Shiwen Zhang}\\
+$\cdot$ \textbf{Leader of a group of 3 people.}
+Programming on computer and smart car, processing images captured by camera with OpenCV, and designing an algorithm to automatically determine the route of the car, and the latency is at most 5ms. \\
+\textbf{Abilities:} Image Processing with OpenCV, Bluetooth communication, MCU development.\\\\
+\textbf{Simple CPU and Memory Replacement policy design} \hfill 2014\\
+\emph{Supervised by Professor Fan Wu}\\
+$\cdot$ \textbf{Independent Study.}
+Developing a simple CPU in Linux and designing my own memory replacement policy, the performance of which is almost 20 times better than traditional policies, such as LRU and LFU.\\
+\textbf{Abilities:} Basic understanding of CPU schedualing and programming with Linux API.
+%\end{spacing}
+
+\section{Skills}
+%\end{spacing}
+\begin{spacing} {0.3}
+\begin{tabular}{r|p{12cm}}
+
+%\renewcommand{\arraystretch}{0.5}
+Programming: &(Proficient) C/C++, MATLAB, Python, Shell, \LaTeX\\
+&(Familiar) Java, JavaScript, HTML5, CSS\\
+\multicolumn{2}{c}{} \\
+Platform: &Windows, Linux, Android, Embedded System\\
+\multicolumn{2}{c}{} \\
+Language: &English (Fluent, TOEFL: 106; GRE: 321+4.0), Mandarin (Native)\\
+\multicolumn{2}{c}{} \\
+Others: &Vocality, Calligraphy, Basketball, Leadership\\
+%\end{spacing}
+\end{tabular}
+\end{spacing}
+
+
+\end{CJK}
+\end{document}
